@@ -421,25 +421,25 @@
 								Μετατρέψτε τους ακόλουθους αριθμούς σε δεκαδικούς:<br>
 								<br>
 								(11010)<sub>2</sub> = <input type="text" id="answer_1" placeholder="Δώσε εδώ την απάντηση σου"> <br>
-								<input type="button" value="check" onclick="z()"><span id="check_1"></span>
+								<input type="button" value="check" onclick="question1()"><span id="check_1"></span>
 								<br>
 								<br>
 								(1001100)<sub>2</sub> = <input type="text" id="answer_2" placeholder="Δώσε εδώ την απάντηση σου"> <br>
-								<input type="button" value="check" onclick="x()"><span id="check_2"></span>
+								<input type="button" value="check" onclick="question2()"><span id="check_2"></span>
 								<br>
 								<br>
 								(11.101)<sub>2</sub> = <input type="text" id="answer_3" placeholder="Δώσε εδώ την απάντηση σου"> <br>
-								<input type="button" value="check" onclick="c()"><span id="check_3"></span>
+								<input type="button" value="check" onclick="question3()"><span id="check_3"></span>
 							</p>
 							<p>
 								Μετατρέψτε τους ακόλουθους αριθμούς σε δυαδικούς(όπου υπάρχει κλασματικό μέρος χρησιμοποιήστε ακρίβεια 2 δεκαδικών ψήφιων):<br>
 								<br>
 								(155)<sub>10</sub> = <input type="text" id="answer_4" placeholder="Δώσε εδώ την απάντηση σου"> <br>
-								<input type="button" value="check" onclick="v()"><span id="check_4"></span>
+								<input type="button" value="check" onclick="question4()"><span id="check_4"></span>
 								<br>
 								<br>
 								(17.16)<sub>10</sub> = <input type="text" id="answer_5" placeholder="Δώσε εδώ την απάντηση σου"> <br>
-								<input type="button" value="check" onclick="x()"><span id="check_5"></span>
+								<input type="button" value="check" onclick="question5()"><span id="check_5"></span>
 								<br>
 								<br>
 							</p>
@@ -471,7 +471,7 @@
 			});
 			</script>
 			<script>
-				function z()
+				function question1()
 				{
 				var a=document.getElementById("answer_1");
 				if((a.value=="an 26")||(a.value=="26"))
@@ -483,7 +483,7 @@
 				document.getElementById('check_1').innerHTML= ' Λάθος!! ';
 				}
 				}
-				function x()
+				function question2()
 				{
 				var a=document.getElementById("answer_2");
 				if((a.value=="an 76")||(b.value=="76"))
@@ -495,7 +495,7 @@
 				document.getElementById('check_2').innerHTML= ' Λάθος!!';
 				}
 				}
-				function c()
+				function question3()
 				{
 				var a=document.getElementById("answer_3");
 				if((a.value=="an 3.625")||(c.value=="3.625"))
@@ -507,7 +507,7 @@
 				document.getElementById('check_3').innerHTML= '	Λάθος!!';
 				}
 				}
-				function v()
+				function question4()
 				{
 				var a=document.getElementById("answer_4");
 				if((a.value=="an 10011011")||(a.value=="10011011"))
@@ -519,7 +519,7 @@
 				document.getElementById('check_4').innerHTML= ' Λάθος!! ';
 				}
 				}
-				function x()
+				function question5()
 				{
 				var a=document.getElementById("answer_5");
 				if((a.value=="an 10001.00")||(a.value=="10001.00"))
