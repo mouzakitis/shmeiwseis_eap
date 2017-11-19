@@ -1,15 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Αριθμητικά Συστήματα</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -124,7 +121,8 @@
 								... όπως θα δούμε αναλυτικά στην σύνεχεια.
 							</p>
 							<h2 id="duadiko_susthma">
-								<u>3.Το δυαδικό Σύστημα Αρίθμησης</u></h2>
+								<u>3.Το δυαδικό Σύστημα Αρίθμησης</u>
+							</h2>
 							<h3>
 								<u>1.Κωδικοποίηση Αριθμών και Μετατροπή από το Δυαδικό σε Δεδαδικό</u>
 							</h3>
@@ -261,6 +259,62 @@
 								Δυάδες: 2<sup>1</sup> = 2 <br>
 								Τετράδες: 2<sup>2</sup> = 4
 							</p>
+							<h3>
+								<u>2.Mετατροπή από Δεκαδικό σε Δυαδικό</u>
+							</h3>
+							<p style="background-color: #BED1E0; padding-left: 10px;">
+								Για να μετατρέψουμε έναν <strong>δεκαδικό αριθμό σε δυαδικό,</strong> πραγματοποιούμε <u>διαδοχικές ακέραιες διαιρέσεις με το 2</u> μέχρι να απομείνει πηλίκο 0. Τα ψηφία του δυαδικού αριθμού δίνονται ως η <u>αντίστροφη σειρά</u> των υπολοίπων των διαιρέσεων.<br>
+								<br>
+							&#9658; <u>Παράδειγμα:</u> Να μετατραπεί ο (135)<sub>10</sub> σε δυαδικό:
+							<table class="align-center">
+								<tr>
+									<th class="align-center">Αριθμός /2</th>
+									<th class="align-center">Πηλίκο</th>
+									<th class="align-center">Υπόλοιπο</th>
+								</tr>
+								<tr>
+									<td>135/2</td>
+									<td>67</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>67/2</td>
+									<td>33</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>33/2</td>
+									<td>16</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>16/2</td>
+									<td>8</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>8/2</td>
+									<td>4</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>4/2</td>
+									<td>2</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>2/2</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>1/2</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+							</table>
+							<p style="background-color: #BED1E0; padding-left: 10px;"><strong>Άρα σημειώνοντας τα υπόλοιπα των διαιρέσεων του πίνακα απο κάτω προς τα πάνω έχουμε πως το δυαδικό του (135)<sub>10</sub> είναι το (10000111)<sub>2</sub></strong></p>
+							</p>
 						</div>
 					</div>
 			</div>
@@ -269,8 +323,21 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+			    if (this.hash !== "") {
+			      event.preventDefault();
+			      var hash = this.hash;
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 1200, function(){
+			        window.location.hash = hash;
+			      });
+			    } 
+			  });
+			});
+			</script>
 	</body>
 </html>
