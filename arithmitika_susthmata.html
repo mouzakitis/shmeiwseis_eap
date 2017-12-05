@@ -454,7 +454,7 @@
 								<p>
 									<ul style="background-color: #86C2CF; padding-left: 10px;">
 									Το <strong>οκταδικό σύστημα αρίθμησης</strong> χρησιμοποιεί για σύμβολα τα ψηφία: <br>
-									<div class="align-center"> 0,1,2,3,4,5,6,7	</div>
+									<div class="align-center"> 0,1,2,3,4,5,6,7</div>
 									και αντίστοιχα με το δεκαδικό σύστημα: <br>
 									<li style="margin-left: 20px;">Για το <u>ακέραιο</u> μέρος
 										<ul>
@@ -588,13 +588,17 @@
 							<h3>
 								<u>2.Mετατροπή από Δεκαδικό σε Οκταδικό</u>
 							</h3>
-							<p><ul style="background-color: #BED1E0; padding-left: 10px;">
-									Για την μετατροπή <strong>δεκαδικού αριθμού σε οκταδικό</strong>
+							<p><ul style="background-color: #86C2CF; padding-left: 10px;">
+									Για την μετατροπή <strong>δεκαδικού αριθμού σε οκταδικό:</strong>
 									<li style="margin-left: 20px;"><strong>Ακέραιο μέρος:</strong> Πραγματοποιούμε <u>διαδοχικές ακέραιες διαιρέσεις με το 8</u> μέχρι να απομείνει πηλίκο 0. Τα ψηφία οκταδικού αριθμού δίνονται ως η <u>αντίστροφη σειρά</u> των υπολοίπων των διαιρέσεων:</li>
 									<li style="margin-left: 20px;"><strong>Κλασματικό μέρος:</strong> Η μετατροπή του γίνεται με <u>διαδοχικούς πολλαπλασιασμούς</u> με το 8. Το ακέραιο μέρος κάθε αριθμού που προκύπτει είναι το επόμενο δεκαδικό ψηφίο και το κλασματικό μέρος θα είναι ο επόμενος αριθμός που θα πολλαπλασιαστεί με το 8. </li>
 									<li style="margin-left: 20px;"> Πρέπει να μας προσδιορίζεται η ακρίβεια δεκαδικών ψηφίων.</li>
 								</ul>
 							</p>
+							<h3>
+								<u>2.Μετατροπή από Δεκαδικό σε Οκταδικό</u>
+							</h3>
+							<p style="background-color: #BED1E0; padding-left: 10px;"><u>Παράδειγμα:</u> Να μετατραπεί ο <br></p>
 						</div>
 					</div>
 			</div>
@@ -605,25 +609,25 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			$(document).ready(function(){
-			  $("a").on('click', function(event) {
-			    if (this.hash !== "") {
-			      event.preventDefault();
-			      var hash = this.hash;
-			      $('html, body').animate({
-			        scrollTop: $(hash).offset().top
-			      }, 2000, function(){
-			        window.location.hash = hash;
-			      });
-			    } 
-			  });
-			});
+				$(document).ready(function(){
+				  $("a").on('click', function(event) {
+				    if (this.hash !== "") {
+				      event.preventDefault();
+				      var hash = this.hash;
+				      $('html, body').animate({
+				        scrollTop: $(hash).offset().top
+				      }, 2000, function(){
+				        window.location.hash = hash;
+				      });
+				    } 
+				  });
+				});
 			</script>
 			<script>
 				function question1()
 				{
 				var a=document.getElementById("answer_1");
-				if((a.value=="an 26")||(a.value=="26"))
+				if((a.value=="26"))
 				{
 				document.getElementById('check_1').innerHTML= ' Σωστό , Μπράβο!';
 				}
@@ -632,10 +636,11 @@
 				document.getElementById('check_1').innerHTML= ' Λάθος!! ';
 				}
 				}
+
 				function question2()
 				{
 				var a=document.getElementById("answer_2");
-				if((a.value=="an 76")||(b.value=="76"))
+				if((a.value=="76"))
 				{
 				document.getElementById('check_2').innerHTML= ' Σωστό, Μπράβο!';
 				}
@@ -644,10 +649,11 @@
 				document.getElementById('check_2').innerHTML= ' Λάθος!!';
 				}
 				}
+
 				function question3()
 				{
 				var a=document.getElementById("answer_3");
-				if((a.value=="an 3.625")||(c.value=="3.625"))
+				if((a.value=="3.625"))
 				{
 				document.getElementById('check_3').innerHTML= ' Σωστό, Μπράβο!';
 				}
@@ -656,10 +662,11 @@
 				document.getElementById('check_3').innerHTML= '	Λάθος!!';
 				}
 				}
+
 				function question4()
 				{
 				var a=document.getElementById("answer_4");
-				if((a.value=="an 10011011")||(a.value=="10011011"))
+				if((a.value=="10011011"))
 				{
 				document.getElementById('check_4').innerHTML= ' Σωστό , Μπράβο!';
 				}
@@ -668,10 +675,11 @@
 				document.getElementById('check_4').innerHTML= ' Λάθος!! ';
 				}
 				}
+
 				function question5()
 				{
 				var a=document.getElementById("answer_5");
-				if((a.value=="an 10001.00")||(a.value=="10001.00"))
+				if((a.value=="10001.00"))
 				{
 				document.getElementById('check_5').innerHTML= ' Σωστό , Μπράβο!';
 				}
